@@ -12,7 +12,7 @@ Future<List<Question>> getQuestions(Category category, int total, String difficu
   //   url = "$url&difficulty=$difficulty";
   // }
   // http.Response res = await http.get(url);
-  String baseUrl = "https://6176781003178d00173dac6b.mockapi.io/question";
+  // String baseUrl = "https://6176781003178d00173dac6b.mockapi.io/question";
   // String baseUrl = "http://api.myfeel.me/question/questionArr";
 
   http.Response res = await http.get(Uri.parse(baseUrl));

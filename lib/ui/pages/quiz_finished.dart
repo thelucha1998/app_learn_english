@@ -102,8 +102,12 @@ class QuizFinishedPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     color: Theme.of(context).accentColor.withOpacity(0.8),
-                    child: Text("Màn hình chính"),
-                    onPressed: () => Navigator.pop(context),
+                    child: Text("Chơi lại"),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (_) => CheckAnswersPage(questions: questions, answers: answers,)
+                      ));
+                    }
                   ),
                   RaisedButton(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
